@@ -1,4 +1,4 @@
-# CutList Optimiser — Backend MVP
+# CutList Optimiser
 
 A backend pipeline that receives a cut list, optimises piece placement across the minimum number of stock boards using Google OR-Tools, and generates a PDF layout plan with kerf-aware positioning.
 
