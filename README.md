@@ -33,25 +33,25 @@ cutlist-optimiser/
 ## Requirements
 
 - Python 3.11+
-- Dependencies listed in `requirements.txt`
+- Conda (recommended for environment isolation)
 
-Install dependencies:
+Create a clean environment before installing — OR-Tools can conflict 
+with existing protobuf versions in shared environments:
 
-```bash
-pip install -r requirements.txt
-```
-
----
+    conda create -n cutlist python=3.11
+    conda activate cutlist
+    pip install -r requirements.txt
 
 ## Running the Demo
 
-```bash
-python main.py
-```
+Make sure the cutlist environment is active first:
 
-This runs a full pipeline with four sample jobs including one intentionally invalid payload to demonstrate validation. PDFs are saved to the `output/` folder.
+    conda activate cutlist
+    python main.py
 
----
+This runs a full pipeline with four sample jobs including one 
+intentionally invalid payload to demonstrate validation. 
+PDFs are saved to the output/ folder.
 
 ## Payload Format
 
@@ -111,7 +111,7 @@ STEP 3: Generating PDFs
 
 ## Notes
 
-- Workers are stateless -- each job is fully isolated, which avoids race conditions at scale
+- Workers are stateless - each job is fully isolated, which avoids race conditions at scale
 - The solver uses OR-Tools CP-SAT, the same engine used in Google's supply chain tooling
 - Designed to handle 500,000+ requests per day via horizontal scaling
 
