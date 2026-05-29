@@ -20,7 +20,7 @@ Built as an MVP to demonstrate the core logic before cloud deployment (Pub/Sub, 
 
 ```
 cutlist-optimiser/
-├── main.py            # Entry point — runs the full pipeline demo
+├── main.py            # Entry point, runs the full pipeline demo
 ├── solver.py          # OR-Tools CP-SAT optimisation logic
 ├── queue_runner.py    # Job queue with concurrent workers
 ├── pdf_generator.py   # ReportLab PDF generation
@@ -54,7 +54,6 @@ intentionally invalid payload to demonstrate validation.
 PDFs are saved to the output/ folder.
 
 ## Payload Format
-
 ```json
 {
   "board": { "w": 2440, "h": 1220 },
@@ -117,4 +116,4 @@ STEP 3: Generating PDFs
 
 ---
 
-*Gomolemo -- Computer Science and Business Computing*
+*Gomolemo ~ Computer Science and Business Computing*
