@@ -38,7 +38,7 @@ cutlist-optimiser/
 Create a clean environment before installing — OR-Tools can conflict 
 with existing protobuf versions in shared environments:
 
-    conda create -n cutlist python=3.11
+    conda create -n cutlist
     conda activate cutlist
     pip install -r requirements.txt
 
